@@ -1,0 +1,14 @@
+graph graphname {
+  a;
+  b;
+  c;
+  d;
+  a -- b;
+  b -- a;
+  a -- c;
+  c -- a;
+  b -- d;
+  d -- b;
+  c -- d;
+  d -- c;
+}

@@ -1,0 +1,11 @@
+include(GoogleTest)
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIR})
+
+add_executable(graph_algorithms_tests graph_algorithms_tests.cpp)
+
+target_link_libraries(graph_algorithms_tests s21_graph_algorithms GTest::gtest_main)
+gtest_discover_tests(graph_algorithms_tests)
+
+add_custom_target(graph_algo_testing COMMAND graph_algorithms_tests)
+add_dependencies(graph_algo_testing s21_graph_algorithms)
